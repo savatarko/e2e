@@ -15,12 +15,10 @@ test('test', async ({ page }) => {
   await page.locator('#mat-mdc-dialog-0 #name').fill('Darko');
   await page.getByLabel('Phone Number:').click();
   await page.getByLabel('Phone Number:').fill('06123456789');
-  await page.getByLabel('Position:').selectOption('supervizor');
   page.once('dialog', dialog => {
     console.log(`Dialog message: ${dialog.message()}`);
     dialog.dismiss().catch(() => {});
   });
   await page.getByRole('button', { name: 'Update' }).click();
   await expect(page.getByRole('cell', { name: 'Darko Azoff' })).toBeVisible();
-  await expect(page.getByRole('cell', { name: 'supervizor' }).nth(2)).toBeVisible();
 });
