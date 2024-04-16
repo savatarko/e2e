@@ -10,7 +10,7 @@ test('test', async ({ page }) => {
   await page.locator('input[type="password"]').fill('user1');
   await page.getByRole('button', { name: 'Login' }).click();
   await page.getByText('Admin panel').click();
-  await page.getByRole('row', { name: 'Darko Azoff donnie@gmail.com' }).locator('#options-button').hover();
+  await page.getByRole('row', { name: 'Donnie Azoff donnie@gmail.com' }).locator('#options-button').hover();
   await page.getByRole('button', { name: 'Edit Profile' }).click();
   await page.locator('#mat-mdc-dialog-0 #name').fill('Darko');
   await page.getByLabel('Phone Number:').click();
