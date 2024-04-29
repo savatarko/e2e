@@ -9,6 +9,11 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.43.0",
-    "@types/node": "^20.12.7"
+    "@types/node": "^20.12.7",
+    "mail-listener2": "^0.3.1"
+  },
+  "dependencies": {
+    "mail-listener5": "^2.1.2",
+    "mail-notifier": "^0.5.0"
   }
 }

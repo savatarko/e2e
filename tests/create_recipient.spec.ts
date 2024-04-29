@@ -4,7 +4,7 @@ test('test', async ({ page }) => {
   await page.goto('http://localhost:4200/');
   await page.goto('http://localhost:4200/login');
   await page.getByLabel('Email').click();
-  await page.getByLabel('Email').fill('customer@gmail.com');
+  await page.getByLabel('Email').fill('banka1korisnik@gmail.com');
   await page.locator('input[type="password"]').click();
   await page.locator('input[type="password"]').fill('customer');
   await page.getByRole('button', { name: 'Login' }).click();
